@@ -74,6 +74,8 @@ This package contains ZFS modules sources for Linux kernel.
 sed -i 's|datarootdir|libdir|' lib/libzfs/Makefile.am
 
 %build
+export CC=gcc
+export CXX=g++
 #autoreconf
 %configure \
 	--sbindir=/sbin \
