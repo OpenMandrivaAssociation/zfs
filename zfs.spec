@@ -161,7 +161,7 @@ fi
 %{_sysconfdir}/modules-load.d/%name.conf
 %{_unitdir}/*.service
 %{_unitdir}/*.target
-%{_unitdir-preset}/50-zfs.preset
+#{_unitdir-preset}/50-zfs.preset
 /lib/udev/*_id
 %{_udevrulesdir}/*.rules
 %exclude /sbin/zed
