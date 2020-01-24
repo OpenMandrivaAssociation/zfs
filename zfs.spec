@@ -16,7 +16,9 @@ BuildRequires: pkgconfig(libssl)
 BuildRequires: pkgconfig(udev) 
 BuildRequires: pkgconfig(uuid)
 BuildRequires: pkgconfig(python)
+BuildRequires: python3dist(setuptools)
 BuildRequires: pkgconfig(zlib)
+BuildRequires: pkgconfig(libtirpc)
 
 Conflicts: fuse-zfs
 
