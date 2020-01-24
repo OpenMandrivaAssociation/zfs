@@ -5,7 +5,7 @@
 %global _localstatedir %_var
 #define _userunitdir /usr/lib/systemd/user/
 
-%define libname %mklibname %{name}_ %{major}
+%define libname %mklibname %{name}
 %define devname %mklibname -d %{name}
 
 Name: zfs
