@@ -167,10 +167,10 @@ fi
 %exclude /sbin/zed
 /sbin/*
 %_bindir/*
-%_man1dir/*.1*
-%_man5dir/*.5*
-%_man8dir/*.8*
-%exclude %_man8dir/zed.8*
+#_man1dir/*.1*
+#_man5dir/*.5*
+#_man8dir/*.8*
+#exclude %_man8dir/zed.8*
 
 %files zed
 %dir %_sysconfdir/%name/zed.d
@@ -179,7 +179,7 @@ fi
 %_unitdir/zfs-zed.service
 /sbin/zed
 %_libexecdir/zfs
-%_man8dir/zed.8*
+#_man8dir/zed.8*
 
 %files -n lib%name
 /%_lib/*.so.*
