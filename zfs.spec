@@ -151,42 +151,42 @@ if [ $1 -eq 0 ] ; then
 fi
 
 %files utils
-%_datadir/doc/%name-utils-%version
-%dir %_sysconfdir/%name
-%ghost %_sysconfdir/%name/zpool.cache
-%dir %_sysconfdir/dfs
-%ghost %_sysconfdir/dfs/sharetab
-%exclude %_unitdir/zfs-zed.service
-%config(noreplace) %_sysconfdir/modprobe.d/zfs.conf
-%_sysconfdir/modules-load.d/%name.conf
-%_unitdir/*.service
-%_unitdir/*.target
-%_unitdir-preset/50-zfs.preset
+%{_datadir}/doc/%name-utils-%version
+%dir %{_sysconfdir}/%name
+%ghost %{_sysconfdir}/%name/zpool.cache
+%dir %{_sysconfdir}/dfs
+%ghost %{_sysconfdir}/dfs/sharetab
+%exclude %{_unitdir}/zfs-zed.service
+%config(noreplace) %{_sysconfdir}/modprobe.d/zfs.conf
+%{_sysconfdir}/modules-load.d/%name.conf
+%{_unitdir}/*.service
+%{_unitdir}/*.target
+%{_unitdir-preset}/50-zfs.preset
 /lib/udev/*_id
-%_udevrulesdir/*.rules
+%{_udevrulesdir}/*.rules
 %exclude /sbin/zed
 /sbin/*
-%_bindir/*
+%{_bindir}/*
 #_man1dir/*.1*
 #_man5dir/*.5*
 #_man8dir/*.8*
 #exclude %_man8dir/zed.8*
 
 %files zed
-%dir %_sysconfdir/%name/zed.d
-%_sysconfdir/%name/zed.d/zed.rc
-%_sysconfdir/%name/zed.d/zed-functions.sh
-%_unitdir/zfs-zed.service
+%dir %{_sysconfdir}/%name/zed.d
+%{_sysconfdir}/%name/zed.d/zed.rc
+%{_sysconfdir}/%name/zed.d/zed-functions.sh
+%{_unitdir}/zfs-zed.service
 /sbin/zed
-%_libexecdir/zfs
+%{_libexecdir}/zfs
 #_man8dir/zed.8*
 
 %files -n lib%name
-/%_lib/*.so.*
+/%{_lib}/*.so.*
 
 %files -n lib%name-devel
-%_includedir/*
-%_pkgconfigdir/*.pc
+%{_includedir}/*
+#_pkgconfig/*.pc
 %_libdir/*.so
 
 %files -n kernel-source-%name
