@@ -200,7 +200,7 @@ fi
 %files -n lib%name-devel
 %{_includedir}/*
 %{_libdir}/pkgconfig/libzfs.pc
-%{_libdir}/pkgconfig/libzfs.pc
+%{_libdir}/pkgconfig/libzfs_core.pc
 %{_libdir}/*.so
 
 %files -n kernel-source-%name
