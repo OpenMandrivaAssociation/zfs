@@ -5,6 +5,9 @@
 %global _localstatedir %_var
 #define _userunitdir /usr/lib/systemd/user/
 
+%define libname %mklibname %{name}_ %{major}
+%define devname %mklibname -d %{name}
+
 Name: zfs
 Version: 0.8.3
 Release: 1
@@ -24,6 +27,7 @@ BuildRequires: python3dist(setuptools)
 BuildRequires: pkgconfig(zlib)
 BuildRequires: pkgconfig(libtirpc)
 BuildRequires: pkgconfig(libsystemd)
+BuildRequires: kernel-release-devel
 
 Conflicts: fuse-zfs
 
@@ -48,28 +52,28 @@ Group: System/Kernel and hardware
 This package adds OpenZFS to the system initramfs with a hook
 for the initramfs-tools infrastructure.
 
-%package -n lib%name
+%package -n %{libname}
 Summary: ZFS shared libraries
 Group: System/Libraries
 
-%description -n lib%name
+%description -n %{libname}
 This package contains ZFS shared libraries.
 
-%package -n lib%name-devel
+%package -n %{devname}
 Summary: ZFS development files
 Group: Development/C
 
-%description -n lib%name-devel
+%description -n %{devname}
 This package contains ZFS development files.
 
-%package -n kernel-source-%name
-Summary: ZFS modules sources for Linux kernel
-Group: Development/Kernel
-BuildArch: noarch
-Provides: kernel-src-%name = %version-%release
+#package -n kernel-source-%name
+#Summary: ZFS modules sources for Linux kernel
+#Group: Development/Kernel
+#BuildArch: noarch
+#Provides: kernel-src-%name = %version-%release
 
-%description -n kernel-source-%name
-This package contains ZFS modules sources for Linux kernel.
+#description -n kernel-source-%name
+#This package contains ZFS modules sources for Linux kernel.
 
 %prep
 %setup -q
@@ -194,14 +198,14 @@ fi
 %{_libexecdir}/zfs
 %{_mandir}/man8/zed.8*
 
-%files -n lib%name
+%files -n %{libname}
 /%{_lib}/*.so.*
 
-%files -n lib%name-devel
+%files -n %{devname}
 %{_includedir}/*
 %{_libdir}/pkgconfig/libzfs.pc
 %{_libdir}/pkgconfig/libzfs_core.pc
 %{_libdir}/*.so
 
-%files -n kernel-source-%name
+#files -n kernel-source-%name
 #_usrsrc/kernel
