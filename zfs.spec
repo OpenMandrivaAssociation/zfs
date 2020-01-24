@@ -190,4 +190,4 @@ fi
 %_libdir/*.so
 
 %files -n kernel-source-%name
-%_usrsrc/kernel
+#_usrsrc/kernel
