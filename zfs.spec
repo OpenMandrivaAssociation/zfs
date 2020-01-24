@@ -1,3 +1,5 @@
+%define _disable_lto 1
+
 %define _libexecdir %_prefix/libexec
 %global _localstatedir %_var
 
