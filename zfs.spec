@@ -9,7 +9,7 @@
 %define devname %mklibname -d %{name}
 
 Name: zfs
-Version: 0.8.3
+Version: 0.8.4
 Release: 1
 Summary: ZFS on Linux
 License: CDDL
