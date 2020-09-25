@@ -10,7 +10,7 @@
 
 Name: zfs
 Version: 0.8.4
-Release: 1
+Release: 2
 Summary: ZFS on Linux
 License: CDDL
 Group: System/Kernel and hardware
@@ -76,8 +76,7 @@ This package contains ZFS development files.
 #This package contains ZFS modules sources for Linux kernel.
 
 %prep
-%setup -q
-%patch1 -p1
+%autosetup -p1
 sed -i 's|datarootdir|libdir|' lib/libzfs/Makefile.am
 
 %build
