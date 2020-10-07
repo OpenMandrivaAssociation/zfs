@@ -80,8 +80,8 @@ This package contains ZFS development files.
 sed -i 's|datarootdir|libdir|' lib/libzfs/Makefile.am
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 #autoreconf
 %configure \
 	--sbindir=/sbin \
