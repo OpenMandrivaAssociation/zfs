@@ -9,7 +9,7 @@
 %define devname %mklibname -d %{name}
 
 Name: zfs
-Version: 0.8.5
+Version: 2.0.0
 Release: 1
 Summary: ZFS on Linux
 License: CDDL
@@ -190,7 +190,6 @@ fi
 %exclude %{_mandir}/man8/zed.8.*
 
 %files zed
-%dir %{_sysconfdir}/%name/zed.d
 %{_sysconfdir}/%name/zed.d*
 %{_unitdir}/zfs-zed.service
 /sbin/zed
@@ -204,6 +203,7 @@ fi
 %{_includedir}/*
 %{_libdir}/pkgconfig/libzfs.pc
 %{_libdir}/pkgconfig/libzfs_core.pc
+%{_libdir}/pkgconfig/libzfsbootenv.pc
 %{_libdir}/*.so
 
 #files -n kernel-source-%name
