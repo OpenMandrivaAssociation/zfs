@@ -190,7 +190,6 @@ fi
 %exclude %{_mandir}/man8/zed.8.*
 
 %files zed
-%dir %{_sysconfdir}/%name/zed.d
 %{_sysconfdir}/%name/zed.d*
 %{_unitdir}/zfs-zed.service
 /sbin/zed
@@ -204,6 +203,7 @@ fi
 %{_includedir}/*
 %{_libdir}/pkgconfig/libzfs.pc
 %{_libdir}/pkgconfig/libzfs_core.pc
+%{_libdir}/pkgconfig/libzfsbootenv.pc
 %{_libdir}/*.so
 
 #files -n kernel-source-%name
