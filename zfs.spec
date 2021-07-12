@@ -9,14 +9,14 @@
 %define devname %mklibname -d %{name}
 
 Name: zfs
-Version: 2.0.5
+Version: 2.1.0
 Release: 1
 Summary: ZFS on Linux
 License: CDDL
 Group: System/Kernel and hardware
 URL: http://zfsonlinux.org/
 Source0: https://github.com/zfsonlinux/zfs/releases/download/%{name}-%{version}/%{name}-%{version}.tar.gz
-Patch1: zfs-0.7.13-import-by-disk-id.patch
+#Patch1: zfs-0.7.13-import-by-disk-id.patch
 
 BuildRequires: pkgconfig(blkid)
 BuildRequires: pkgconfig(libssl)
@@ -181,12 +181,11 @@ fi
 %{_bindir}/*
 %{_datadir}/initramfs-tools/*
 %{_mandir}/man1/*
+%{_mandir}/man4/*
 %{_mandir}/man5/*
+%{_mandir}/man7/*
 %{_mandir}/man8/*
 
-#_man1dir/*.1*
-#_man5dir/*.5*
-#_man8dir/*.8*
 %exclude %{_mandir}/man8/zed.8.*
 
 %files zed
