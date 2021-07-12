@@ -181,12 +181,11 @@ fi
 %{_bindir}/*
 %{_datadir}/initramfs-tools/*
 %{_mandir}/man1/*
+%{_mandir}/man4/*
 %{_mandir}/man5/*
+%{_mandir}/man7/*
 %{_mandir}/man8/*
 
-#_man1dir/*.1*
-#_man5dir/*.5*
-#_man8dir/*.8*
 %exclude %{_mandir}/man8/zed.8.*
 
 %files zed
