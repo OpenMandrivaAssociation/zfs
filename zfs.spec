@@ -9,7 +9,7 @@
 %define devname %mklibname -d %{name}
 
 Name: zfs
-Version: 2.1.2
+Version: 2.1.4
 Release: 1
 Summary: ZFS on Linux
 License: CDDL
@@ -28,6 +28,7 @@ BuildRequires: pkgconfig(zlib)
 BuildRequires: pkgconfig(libtirpc)
 BuildRequires: pkgconfig(libsystemd)
 BuildRequires: kernel-release-devel
+BuildRequires: glibc-static-devel
 
 Conflicts: fuse-zfs
 
