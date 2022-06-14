@@ -173,6 +173,8 @@ fi
 %{_unitdir}/*.service
 %{_unitdir}/*.target
 /lib/systemd/system-preset/50-zfs.preset
+/lib/systemd/system/zfs-scrub-monthly@.timer
+/lib/systemd/system/zfs-scrub-weekly@.timer
 /lib/udev/*_id
 %{_udevrulesdir}/*.rules
 /usr/lib/dracut/modules.d/*
