@@ -27,7 +27,7 @@ BuildRequires: python3dist(setuptools)
 BuildRequires: pkgconfig(zlib)
 BuildRequires: pkgconfig(libtirpc)
 BuildRequires: pkgconfig(libsystemd)
-BuildRequires: kernel-release-devel
+BuildRequires: kernel-desktop-devel
 BuildRequires: glibc-static-devel
 
 Conflicts: fuse-zfs
