@@ -172,15 +172,15 @@ fi
 %{_sysconfdir}/zfs/zpool.d*
 %{_unitdir}/*.service
 %{_unitdir}/*.target
-/lib/systemd/system-preset/50-zfs.preset
-/lib/systemd/system/zfs-scrub-monthly@.timer
-/lib/systemd/system/zfs-scrub-weekly@.timer
+#/lib/systemd/system-preset/50-zfs.preset
+#/lib/systemd/system/zfs-scrub-monthly@.timer
+#/lib/systemd/system/zfs-scrub-weekly@.timer
 /lib/udev/*_id
 %{_udevrulesdir}/*.rules
 /usr/lib/dracut/modules.d/*
  /usr/lib/systemd/system-generators/zfs-mount-generator
 %exclude /sbin/zed
-/sbin/*
+#/sbin/*
 %{_bindir}/*
 %{_datadir}/initramfs-tools/*
 %{_mandir}/man1/*
