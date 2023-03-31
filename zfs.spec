@@ -10,7 +10,7 @@
 
 Name: zfs
 Version: 2.1.5
-Release: 1
+Release: 2
 Summary: ZFS on Linux
 License: CDDL
 Group: System/Kernel and hardware
