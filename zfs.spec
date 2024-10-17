@@ -14,7 +14,7 @@ Release: 2
 Summary: ZFS on Linux
 License: CDDL
 Group: System/Kernel and hardware
-URL: http://zfsonlinux.org/
+URL: https://zfsonlinux.org/
 Source0: https://github.com/zfsonlinux/zfs/releases/download/%{name}-%{version}/%{name}-%{version}.tar.gz
 #Patch1: zfs-0.7.13-import-by-disk-id.patch
 
