@@ -18,6 +18,11 @@ URL: https://zfsonlinux.org/
 Source0: https://github.com/zfsonlinux/zfs/releases/download/%{name}-%{version}/%{name}-%{version}.tar.gz
 #Patch1: zfs-0.7.13-import-by-disk-id.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig(blkid)
 BuildRequires: pkgconfig(libssl)
 BuildRequires: pkgconfig(udev) 
